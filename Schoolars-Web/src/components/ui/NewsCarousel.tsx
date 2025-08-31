@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import {
 	Carousel,
@@ -10,15 +9,14 @@ import {
 
 //@ts-ignore
 
-export function CarouselDemo({ News }) {
+export function NewsCarousel({ News }) {
 	return (
-		<div className='relative w-[75vw] h-[70vh]'>
+		<div className='relative w-[75vw] h-[40vh]'>
 			<Carousel
 				opts={{
 					align: 'start',
 					loop: true,
 				}}
-				className='w-full h-full'
 				style={{ alignContent: 'center' }}
 			>
 				<CarouselContent className='h-full'>
@@ -33,10 +31,10 @@ export function CarouselDemo({ News }) {
 												flexDirection: 'column',
 											}}
 										>
-											<h2 className='text-[clamp(10px,2rem,4.5rem)] scroll-m-20 border-b pb-3 text-3xl font-semibold tracking-tight first:mt-0'>
+											<h2 className='text-[2.2rem] scroll-m-20 border-b pb-3 text-3xl font-semibold tracking-tight first:mt-0'>
 												{part.title}
 											</h2>
-											<p className='text-[clamp(8px,1rem,3rem)] leading-7 [&:not(:first-child)]:mt-8'>
+											<p className='text-[1.4rem] leading-7 [&:not(:first-child)]:mt-8'>
 												{part.body}
 											</p>
 										</div>
