@@ -4,6 +4,8 @@ import { News } from '@/mockedData/DataBase.js'
 import { Events } from '@/mockedData/DataBase.js'
 // import { Link } from 'react-router'
 import { EventCalendar } from '@/components/ui/EventCalendar'
+import { Link } from 'react-router'
+
 const WelcomePage = () => {
 	return (
 		<>
@@ -20,8 +22,8 @@ const WelcomePage = () => {
 				<h1 className='croll-m-20 text-5xl text-center  font-bold tracking-tight text-balance'>
 					Школьный портал технического творчества
 				</h1>
-				<Button className='min-w-[20vh] min-h-[5vh] text-[1.1rem]'>
-					Войти
+				<Button asChild className='min-w-[20vh] min-h-[5vh] text-[1.1rem]'>
+					<Link to={'/login'}>Войти</Link>
 				</Button>
 			</div>
 			<EventCalendar Events={Events} />
