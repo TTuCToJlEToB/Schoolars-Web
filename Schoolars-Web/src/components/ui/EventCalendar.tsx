@@ -1,7 +1,9 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
 
-// @ts-ignore
-export function EventCalendar({ Events }) {
+type EventType = { date: string; event: string }
+type EventCalendarParams = { Events: EventType[] }
+
+export function EventCalendar({ Events }: EventCalendarParams) {
 	return (
 		<div
 			className='mb-2 gap-4'
@@ -29,7 +31,6 @@ export function EventCalendar({ Events }) {
 					overflow: 'auto',
 				}}
 			>
-				{/* @ts-ignore */}
 				{Events.map(event => (
 					<Card className='flex items-center justify-center w-[45%]'>
 						<CardTitle>{event.date}</CardTitle>

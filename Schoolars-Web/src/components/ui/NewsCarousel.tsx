@@ -7,9 +7,10 @@ import {
 	CarouselPrevious,
 } from '@/components/ui/carousel'
 
-//@ts-ignore
+type NewsType = { body: string; title: string }
+type NewsCarouselParams = { News: NewsType[] }
 
-export function NewsCarousel({ News }) {
+export function NewsCarousel({ News }: NewsCarouselParams) {
 	return (
 		<Carousel
 			className='relative w-[90%] h-[40vh] mb-13 mt-7'
