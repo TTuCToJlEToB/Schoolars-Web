@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import axios, { type RawAxiosRequestHeaders } from 'axios'
 
 export function httpClient() {
 	const headers: RawAxiosRequestHeaders = {}
 
 	return axios.create({
-		baseURL: 'http://localhost:1224/',
+		baseURL: 'http://localhost:3535/',
 		timeout: 300_000,
 		headers,
 	})

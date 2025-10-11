@@ -1,29 +1,17 @@
 import { Button } from '@/components/ui/button'
-import {
-	Card,
-	CardAction,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import type { AuthForm } from '@/types/Authorization'
 import { useFormik } from 'formik'
 
-type LoginForm = {
-	email: string
-	password: string
-}
-
 const LoginCard = () => {
-	const formik = useFormik<LoginForm>({
+	const formik = useFormik<AuthForm>({
 		initialValues: {
 			email: '',
 			password: '',
 		},
-		onSubmit: values => {
+		onSubmit: (values) => {
 			alert(values)
 		},
 	})
@@ -32,10 +20,7 @@ const LoginCard = () => {
 		<Card className='w-full max-w-screen-lg'>
 			<CardHeader>
 				<CardTitle>Войдите в свою учетную запись</CardTitle>
-				<CardDescription>
-					Введите свой адрес электронной почты ниже, чтобы войти в свою учетную
-					запись
-				</CardDescription>
+				<CardDescription>Введите свой адрес электронной почты ниже, чтобы войти в свою учетную запись</CardDescription>
 				{/* <CardAction>
 					<Button variant='link'>Sign Up</Button>
 				</CardAction> */}
@@ -58,10 +43,7 @@ const LoginCard = () => {
 						<div className='grid gap-2'>
 							<div className='flex items-center'>
 								<Label htmlFor='password'>Пароль</Label>
-								<a
-									href='/'
-									className='ml-auto inline-block text-sm underline-offset-4 hover:underline'
-								>
+								<a href='/' className='ml-auto inline-block text-sm underline-offset-4 hover:underline'>
 									Забыли пароль?
 								</a>
 							</div>
