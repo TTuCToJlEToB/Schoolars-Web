@@ -2,7 +2,6 @@ import { NewsCarousel } from '@/components/ui/NewsCarousel.js'
 import { Button } from '@/components/ui/button.js'
 import { News } from '@/mockedData/DataBase.js'
 import { Events } from '@/mockedData/DataBase.js'
-// import { Link } from 'react-router'
 import { EventCalendar } from '@/components/ui/EventCalendar'
 import { Link } from 'react-router'
 
