@@ -6,7 +6,7 @@ type EventCalendarParams = { Events: EventType[] }
 export function EventCalendar({ Events }: EventCalendarParams) {
 	return (
 		<div
-			className='mb-2 gap-4'
+			className='mb-4 gap-4'
 			style={{
 				display: 'flex',
 				flexDirection: 'column',

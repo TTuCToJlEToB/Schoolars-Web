@@ -6,7 +6,15 @@ import Autoplay from 'embla-carousel-autoplay'
 export function NewsCarousel({ News }: NewsCarouselParams) {
 	return (
 		<Carousel
-			className='w-[90%] h-[40vh] mb-13 mt-7'
+			style={{
+				width: '90%',
+				height: '40vh',
+				marginTop: '5vh',
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				marginLeft: '2vh',
+			}}
 			plugins={[
 				Autoplay({
 					delay: 9000,

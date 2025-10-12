@@ -26,14 +26,7 @@ const WelcomePage = () => {
 				</Button>
 			</div>
 			<EventCalendar Events={Events} />
-			<div
-				style={{
-					display: 'flex',
-					justifyContent: 'center',
-				}}
-			>
-				<NewsCarousel News={News} />
-			</div>
+			<NewsCarousel News={News} />
 		</>
 	)
 }
