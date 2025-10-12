@@ -31,7 +31,7 @@ export function EventCalendar({ Events }: EventCalendarParams) {
 					overflow: 'auto',
 				}}
 			>
-				{Events.map(event => (
+				{Events.map((event) => (
 					<Card className='flex items-center justify-center w-[45%]'>
 						<CardTitle>{event.date}</CardTitle>
 						<CardContent>{event.event}</CardContent>
