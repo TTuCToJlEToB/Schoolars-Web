@@ -1,9 +1,7 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
+import { type EventCalendarParams } from '@/types/Events'
 
-type EventType = { date: string; event: string }
-type EventCalendarParams = { Events: EventType[] }
-
-export function EventCalendar({ Events }: EventCalendarParams) {
+export function EventCalendar({ CalendarTitle, Events }: EventCalendarParams & { CalendarTitle: string }) {
 	return (
 		<div
 			className='mb-4 gap-4'
@@ -16,7 +14,7 @@ export function EventCalendar({ Events }: EventCalendarParams) {
 			}}
 		>
 			<h2 className='text-[2.2rem] scroll-m-20 pb-3 text-3xl font-semibold tracking-tight first:mt-0'>
-				Календарь мероприятий
+				{CalendarTitle}
 			</h2>
 			<div
 				style={{

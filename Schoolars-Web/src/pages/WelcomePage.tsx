@@ -25,7 +25,7 @@ const WelcomePage = () => {
 					<Link to={'/login'}>Войти</Link>
 				</Button>
 			</div>
-			<EventCalendar Events={Events} />
+			<EventCalendar CalendarTitle={'Ближайшие мероприятия'} Events={Events} />
 			<NewsCarousel News={News} />
 		</>
 	)
